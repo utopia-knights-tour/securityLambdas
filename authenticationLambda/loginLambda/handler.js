@@ -43,8 +43,7 @@ module.exports.handler = async (event, context) => {
         },
         body: JSON.stringify({
           token,
-          agencyId: user.agencyId,
-          role: user.role
+          user
         })
     };
 

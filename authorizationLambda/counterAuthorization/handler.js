@@ -30,7 +30,6 @@ module.exports.handler = (event, context, callback) => {
         const effect = authorized? 'Allow' : 'Deny';
         const iamPolicy = generateIamPolicy(decodedUser.userId, effect, event.methodArn);
         callback(null, iamPolicy);
-
     } catch(err) {
         callback('Unauthorized');
     }
