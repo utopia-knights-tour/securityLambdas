@@ -24,8 +24,6 @@ const generatePolicyDocument = (effect, methodArn) => {
 
 module.exports.handler = (event, context, callback) => {
     try {
-        console.log(event);
-        console.log(context);
         const token = event.authorizationToken;
         const decodedUser = jwt.verify(token, process.env.JWT_SECRET);
         const authorized = decodedUser.role === "counter";
