@@ -1,5 +1,3 @@
-const jwt = require('jsonwebtoken');
-
 const generateIamPolicy = (principalId, effect, methodArn) => {
     const policyDocument = generatePolicyDocument(effect, methodArn);
     return {
