@@ -1,0 +1,16 @@
+{
+  "name": "authlambda",
+  "version": "1.0.0",
+  "description": "Authentication lambda for Utopia airlines",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "knex": "^0.21.0",
+    "mysql2": "^2.1.0"
+  }
+}
