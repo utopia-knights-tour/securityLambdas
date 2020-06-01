@@ -22,7 +22,6 @@ module.exports.handler = async (event, context) => {
     await knex.transaction(async (trx) => {
         try {
             const id = await knex.insert(user).into('User').transacting(trx);
-
             if (role === "customer") {
                 let customer = { 
                     customerAddress,
@@ -32,6 +31,7 @@ module.exports.handler = async (event, context) => {
                 };
                 await knex.insert(customer).into('Customer').transacting(trx);
             }
+    
         } catch(err) {
             return {
                 statusCode:401,
